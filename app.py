@@ -8,6 +8,37 @@ import streamlit as st
 MODEL_PATH = Path(__file__).parent / "ensemble_used_car_price.joblib"
 
 st.set_page_config(page_title="Used Car Price Estimator", page_icon="🚗")
+st.markdown("""
+<style>
+.stApp {
+    background-color: #f4f7fb;
+}
+
+.block-container {
+    max-width: 1050px;
+    padding-top: 2rem;
+}
+
+h1, h2, h3 {
+    color: #17324d;
+}
+
+div[data-testid="stMetric"] {
+    background: #ffffff;
+    border: 1px solid #dce5ee;
+    border-left: 4px solid #168c8c;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+div[data-testid="stFileUploader"] {
+    background: #ffffff;
+    border: 1px solid #dce5ee;
+    border-radius: 10px;
+    padding: 14px;
+}
+</style>
+""", unsafe_allow_html=True)
 st.title("Used Car Price Estimator")
 st.write("Upload a CSV containing one car listing to estimate its price.")
 
